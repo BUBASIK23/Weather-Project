@@ -1,0 +1,84 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  opacity: 85%;
+}
+
+
+
+input {
+  border-radius: 20px;
+  font-style: italic;
+  font-size: 12px;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+
+.container {
+  margin-left: 0px;
+}
+#today {
+  font-size: 15px;
+  margin:  8px 0 0 3px;
+  
+  display: block;
+}
+
+.place {
+  color: rgb(5, 5, 19);
+  font-weight: 500;
+  font-size: 40px;
+}
+
+#temperature {
+  text-align: right;
+}
+
+#metrics {
+  font-size: 30px;
+  padding: 10px 0 0 0;
+}
+
+#F {
+  font-size: 20px;
+  vertical-align: super;
+}
+
+
+.extremum {
+  padding: 15px 0;
+}
+.features {
+  font-size: 12px;
+  padding: 15px 0;
+}
+
+em {
+  font-size: 12px;
+}
+.message {
+  text-align: right;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.card {
+  text-align: center;
+}
+
+th {
+  text-align: center;
+}
+td {
+  text-align: center;
+}
+
+footer {
+  font-size: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+}

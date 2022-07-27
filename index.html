@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/1c554e649f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    
+    <div class="row">
+      <div class="col Today">
+        <form id = "calendar"><input type="date" placeholder="Today" id="date"/></form>
+      </div>
+      <div class="col">
+        <button type="submit" class="btn btn-primary">Look at your Location</button>
+      </div>
+      <div class="col">
+        <form class="otherPlace" id="searchForPlace">
+          <input type="search" placeholder="Type other place" id ="search-for-place"/>
+        </form>
+      </div>
+      
+    </div>
+  </br>
+    <div class="container">
+      <div class="row">
+        <div class="col-7">
+          <div class="place">
+            <div class="row">
+              <div class="col-6" id="searchedPlace">Kyiv</div>
+              <div class="col-3" id="temperature">25</div>
+              <div class="col-3" id="metrics"><!--<a href="#" id="C">-->°C<!--</a>-->|<!--<a href="#" id="F">-->°F<!--</a>--></div>
+              <span id="today"></span>
+              
+            </div>
+          </div>
+          <div class="extremum">
+            <div class="row">
+              <div class="col-md-auto">DayMax <span id="dayMax">20</span>°C</div>
+              <div class="col-md-auto">DayMin <span id="dayMin">10</span>°C</div>
+            </div>
+          </div>
+          <div class="features">
+            <div class="row row-cols-auto">
+              <div class="col-md-auto">Wind <span id="wind">4</span> km/h</div>
+              <div class="col-md-auto">Humidity <span id="humidity">50</span>%</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <em>Don't forget your jacket ;)</em>
+          <img src="images/Sunny-Period.png" alt="Sunny-Period" width="150px" id="weatherImg" />
+        </div>
+      </div>
+   </br>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Night <span id="Night">10</span>°C</h5>
+              <img src="images/Cloudy.png" alt="Cloudy" width="50px" />
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Morning <span id="Morning">16</span>°C</h5>
+              <img
+                src="images/Sunny-Period.png"
+                alt="clouds and sun"
+                width="50px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Afternoon <span id="Afternoon">20</span>°C</h5>
+              <img src="images/Sunny.png" alt="sunny" width="50px" />
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Evening <span id="Evening">16</span>°C</h5>
+              <img
+                src="images/Light-Showers.png"
+                alt="Light-Showers"
+                width="50px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </br>
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        <div class="message"><em>See next 5 day forecast</em>
+          </div>
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"> 
+        <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Day</th>
+          <th scope="col">Night</th>
+          <th scope="col">Weather</th>
+          <th scope="col">Wind</th>
+          <th scope="col">Humidity</th>
+          <th scope="col">Precipitation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Today</th>
+          <td>+20°C</td>
+          <td>+10°C</td>
+          <td><img src="images/Sunny-Interval.png" width="30px"</td>
+          <td>4 km/h</td>
+          <td>50%</td>
+          <td>30%</td>
+        </tr>
+        <tr>
+            <th scope="row">Mon</th>
+            <td>+22°C</td>
+            <td>+13°C</td>
+            <td><img src="images/Sunny.png" width="30px"</td>
+            <td>5 km/h</div>
+            <td>50%</td>
+            <td>4%</td>
+          </tr>
+          <tr>
+              <th scope="row">Tue</th>
+              <td>+24°C</td>
+              <td>+14°C</td>
+              <td><img src="images/Sunny.png" width="30px"</td>
+              <td>4 km/h</td>
+              <td>40%</td>
+              <td>4%</td>
+            </tr>
+            <tr>
+          <th scope="row">Wedn</th>
+          <td>+25°C</td>
+          <td>+15°C</td>
+          <td><img src="images/Sunny-Period.png" width="30px"</td>
+          <td>6 km/h</td>
+          <td>50%</td>
+          <td>30%</td>
+        </tr>
+        <tr>
+            <th scope="row">Thu</th>
+            <td>+19°C</td>
+            <td>+13°C</td>
+            <td><img src="images/Showers.png" width="30px"</td>
+            <td>5 km/h</td>
+            <td>70%</td>
+            <td>75%</td>
+          </tr>
+          <tr>
+              <th scope="row">Fri</th>
+              <td>+24°C</td>
+              <td>+15°C</td>
+              <td><img src="images/Sunny-Interval.png" width="30px"</td>
+              <td>4 km/h</td>
+              <td>50%</td>
+              <td>45%</td>
+            </tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+  </div>
+</div>
+   </br>
+    <footer>
+      Code by Liubov Bieliaieva
+    </footer>
+    <script src="src/script.js"></script>
+  </body>
+</html>
