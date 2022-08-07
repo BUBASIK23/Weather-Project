@@ -33,16 +33,24 @@ input {
 
 #temperature {
   text-align: right;
+  color: rgb(5, 5, 19);
 }
 
 #metrics {
-  font-size: 30px;
-  padding: 10px 0 0 0;
-}
+  font-size: 25px;
+  color: rgb(5, 5, 19);
+  }
 
-#F {
-  font-size: 20px;
-  vertical-align: super;
+  a:link {text-decoration: none;}
+
+.active {
+  color:  rgb(5, 5, 19);
+  cursor: default;
+  text-decoration: none;
+  font-size: 30px;
+}
+.active:hover {
+  text-decoration: none;
 }
 
 
