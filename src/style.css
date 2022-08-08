@@ -7,9 +7,9 @@ body {
   max-width: 700px;
   border: 1px solid #61A5B5;
   border-radius: 5px;
-  margin: 30px;
+  margin: 15px;
   margin-bottom: 5px;
-  padding: 20px;
+  padding: 10px;
   text-decoration-color: #424649;
 
 }
@@ -37,7 +37,7 @@ font-size: 14px;
 .place {
   color: rgb(28, 28, 46);
   font-weight: 500;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 #temperature {
@@ -123,7 +123,7 @@ footer {
   font-size: 14px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: left;
-  margin-left: 30px;
+  margin-left: 15px;
 }
 
 a #codeByMe:link {
