@@ -4,12 +4,13 @@ body {
 }
 
 .weather {
-  max-width: 700px;
+  max-width: 600px;
   border: 1px solid #61A5B5;
   border-radius: 5px;
   margin: 15px;
   margin-bottom: 5px;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
   text-decoration-color: #424649;
 
 }
@@ -25,19 +26,19 @@ body {
 
 #submitSearch{
 font-size: 14px;
-
 }
+
 
 #today {
   font-size: 15px;
-  margin:  8px 0 0 3px;
+  margin:  8px 0 0 1px;
   display: block;
 }
 
 .place {
   color: rgb(28, 28, 46);
   font-weight: 500;
-  font-size: 35px;
+  font-size: 32px;
 }
 
 #temperature {
@@ -131,3 +132,7 @@ a #codeByMe:link {
   font-size: 14px;
   
 }
+br {content: "";
+  margin: 3em;
+  display: block;
+  font-size: 25%;}
