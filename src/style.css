@@ -4,7 +4,7 @@ body {
 }
 
 .weather {
-  max-width: 600px;
+  max-width: 700px;
   border: 1px solid #61A5B5;
   border-radius: 5px;
   margin: 15px;
@@ -30,7 +30,7 @@ font-size: 14px;
 }
 
 #current-location {
-  display:inline-block;
+  display: inline-block;
   float: right;
 }
 
