@@ -17,6 +17,7 @@ body {
 
 #top-line {
      margin-left: 12px;
+     margin-right: 12px;
   }
 
   #search-for-place {
@@ -24,10 +25,14 @@ body {
   font-size: 14px;
 }
 
-#submitSearch{
+#submitSearch {
 font-size: 14px;
 }
 
+#current-location {
+  display:inline-block;
+  float: right;
+}
 
 #today {
   font-size: 15px;
