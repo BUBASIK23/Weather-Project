@@ -1,4 +1,5 @@
 // showing current day and time
+function formatDate (timestamp) {
 let currentDate = new Date();
 let days = [
   "Sunday",
@@ -11,10 +12,12 @@ let days = [
 ];
 let day = days[currentDate.getDay()];
 let hour = currentDate.getHours();
+if (hour<10){hour=`0${hour}`};
 let min = currentDate.getMinutes();
+if (min<10) {min=`0${min}`};
 let year = currentDate.getFullYear();
-let searchingDate = document.querySelector ("#today");
-searchingDate.innerHTML = `${day} ${hour}:${min}`
+return `${day} ${hour}:${min}`;
+}
 
 
 //function show temp in searched place
@@ -29,6 +32,9 @@ document.querySelector("#wind").innerHTML= Math.round(response.data.wind.speed);
 document.querySelector("#humidity").innerHTML= Math.round(response.data.main.humidity);
 document.querySelector("#dayMax").innerHTML= Math.round(response.data.main.temp_max);
 document.querySelector("#dayMin").innerHTML= Math.round(response.data.main.temp_min);
+document.querySelector("#description").innerHTML= response.data.weather[0].description;
+let iconElement=document.querySelector("#icon");
+iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
  // don't need right now: let weatherDescription = response.data.weather[0].description;
 };
 
@@ -60,7 +66,7 @@ searchForm.addEventListener ("submit", changePlace);
 
 
 
-//function for button
+//function for current location
 function showPosition(position) {
 console.log(position.coords.latitude);
 console.log(position.coords.longitude);
@@ -79,8 +85,8 @@ event.preventDefault ();
 navigator.geolocation.getCurrentPosition(showPosition)
 };
 
-let button = document.querySelector ("button");
-button.addEventListener ("click", myCurrentLocation);
+let currentLocation = document.querySelector ("#current-location");
+currentLocation.addEventListener ("click", myCurrentLocation);
 
 function changeTemptoF(event) {
   event.preventDefault ();
@@ -108,6 +114,9 @@ let celsiusTemp=null;
 
 let metricToC = document.querySelector ("#C");
 metricToC.addEventListener ("click", changeTemptoC);
+
+let searchingDate = document.querySelector ("#today");
+searchingDate.innerHTML = formatDate();
 
 //On-load search for a city
 defaultSearch ("Kyiv");

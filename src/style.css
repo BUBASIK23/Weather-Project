@@ -3,70 +3,93 @@ body {
   opacity: 85%;
 }
 
+.weather {
+  max-width: 700px;
+  border: 1px solid #61A5B5;
+  border-radius: 5px;
+  margin: 30px;
+  margin-bottom: 5px;
+  padding: 20px;
+  text-decoration-color: #424649;
 
+}
 
-input {
-  border-radius: 20px;
+#top-line {
+     margin-left: 12px;
+  }
+
+  #search-for-place {
   font-style: italic;
-  font-size: 12px;
-  padding: 10px;
-  margin: 10px;
+  font-size: 14px;
 }
 
+#submitSearch{
+font-size: 14px;
 
-
-.container {
-  margin-left: 0px;
 }
+
 #today {
   font-size: 15px;
   margin:  8px 0 0 3px;
-  
   display: block;
 }
 
 .place {
-  color: rgb(5, 5, 19);
+  color: rgb(28, 28, 46);
   font-weight: 500;
   font-size: 40px;
 }
 
 #temperature {
   text-align: right;
-  color: rgb(5, 5, 19);
+  color: rgb(28, 28, 46);
+  padding-right: 3px;
 }
 
 #metrics {
-  font-size: 25px;
-  color: rgb(5, 5, 19);
+  font-size: 23px;
+  color: rgb(28, 28, 46);
+  padding-left: 0px;
   }
 
-  a:link {text-decoration: none;}
+#C:link {text-decoration: none;
+  color: rgb(28, 28, 46);
+}
+
+#F:link {text-decoration: none;
+  color: rgb(28, 28, 46);
+}
+
+#C:visited {
+  color: rgb(28, 28, 46);
+}
+#F:visited {
+  color: rgb(28, 28, 46);
+}
 
 .active {
-  color:  rgb(5, 5, 19);
+  color:  rgb(28, 28, 46);
   cursor: default;
   text-decoration: none;
   font-size: 30px;
 }
 .active:hover {
   text-decoration: none;
+  color:  rgb(28, 28, 46);
 }
 
+#description {
+  font-size: 12px;
+  text-align: right;
+  
+}
 
 .extremum {
-  padding: 15px 0;
+  padding-top: 10px;
 }
 .features {
   font-size: 12px;
-  padding: 15px 0;
-}
-
-em {
-  font-size: 12px;
-}
-.message {
-  text-align: right;
+  padding-top: 10px;
 }
 
 img {
@@ -74,9 +97,20 @@ img {
   margin: 0 auto;
 }
 
+#description:first-letter {text-transform: uppercase;}
+
+.message {
+  text-align: right;
+}
+
 .card {
   text-align: center;
+  width: 135px;
+  height: 140px;
 }
+
+.accordion-button {height: 35px;
+  font-size: 12px;}
 
 th {
   text-align: center;
@@ -88,5 +122,12 @@ td {
 footer {
   font-size: 14px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  text-align: center;
+  text-align: left;
+  margin-left: 30px;
+}
+
+a #codeByMe:link {
+  text-decoration: #50D9F4;
+  font-size: 14px;
+  
 }
