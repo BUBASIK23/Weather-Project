@@ -19,6 +19,29 @@ let year = currentDate.getFullYear();
 return `${day} ${hour}:${min}`;
 }
 
+//loop for forecast
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML=`<div class = "row">`;
+  let days = ["Sun", "Mon", "Tue","Wed", "Thu", "Fri", "Sat"];
+  days.forEach (function(day) {
+    forecastHTML= forecastHTML +
+    ` <tr>
+    <th scope="row">${day}</th>
+    <td>+20°C</td>
+    <td>+10°C</td>
+    <td><img src="images/Sunny-Interval.png" width="30px"</td>
+    <td>4 km/h</td>
+    <td>50%</td>
+    <td>30%</td>
+      </tr>`;
+  });
+  forecastHTML=forecastHTML+`</div>`;
+  forecastElement.innerHTML = forecastHTML;
+   
+}
+
 
 //function show temp in searched place
 function showTemp(response) {
@@ -121,9 +144,9 @@ searchingDate.innerHTML = formatDate();
 //On-load search for a city
 defaultSearch ("Kyiv");
 
-
+//calling function forecast
  
-
+displayForecast()
 
 
 //changing to F
