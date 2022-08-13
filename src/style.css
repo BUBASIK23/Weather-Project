@@ -117,8 +117,16 @@ img {
   font-size: 10px;
 }
 
+
+.table {
+  font-size: 14px;
+padding: 0px
+text-align: center;
+}
+
 .accordion-button {height: 35px;
   font-size: 10px;}
+
 
 
 footer {

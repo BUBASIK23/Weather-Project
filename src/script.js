@@ -36,9 +36,7 @@ return days [day];
 function displayForecast(response){
   console.log (response.data.daily);
   let dailyForecast = response.data.daily;
-
   let forecastElement = document.querySelector("#forecast");
-
   let forecastHTML=`<div class = "row">`;
 
   dailyForecast.forEach (function(forecastDay, index) {
@@ -46,17 +44,19 @@ function displayForecast(response){
     forecastHTML= forecastHTML +
     ` <tr>
     <th scope="row" style="text-align:center">${formatDay (forecastDay.dt)}</th>
-    <td >${Math.round(forecastDay.temp.day)}°C</td>
-    <td>${Math.round(forecastDay.temp.night)}°C</td>
-    <td><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" width="75px"></td>
-    <td>${Math.round(forecastDay.wind_speed)} km/h</td>
-    <td>${Math.round(forecastDay.humidity)}%</td>
+    <td style="text-align:center">${Math.round(forecastDay.temp.day)}°C</td>
+    <td style="text-align:center">${Math.round(forecastDay.temp.night)}°C</td>
+    <td style="text-align:center"><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" width="75px"></td>
+    <td style="text-align:center">${Math.round(forecastDay.wind_speed)} km/h</td>
+    <td style="text-align:center">${Math.round(forecastDay.humidity)}%</td>
       </tr>`;
+      
     };
   });
   forecastHTML=forecastHTML+`</div>`;
   forecastElement.innerHTML = forecastHTML;
    console.log(forecastHTML);
+   
 }
 
 function getForecast (coordinates) {
@@ -83,6 +83,8 @@ document.querySelector("#description").innerHTML= response.data.weather[0].descr
 let iconElement=document.querySelector("#icon");
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
  // don't need right now: let weatherDescription = response.data.weather[0].description;
+ 
+
 
 getForecast (response.data.coord);
 };
@@ -170,29 +172,8 @@ searchingDate.innerHTML = formatDate();
 //On-load search for a city
 defaultSearch ("Kyiv");
 
+
 //calling function forecast
  
 
-
-
-//changing to F
-/* commenting- will be in future week
-
-let temp = 
-temp.innerHTML = `${Math.round(16 * 1.8 + 32  )}`;
-}
-
-
-
-
-
-
-//changing to C
-
-let temp = document.querySelector ("#temperature")
-temp.innerHTML = `${Math.round((61 -32 )/ 1.8  )}`;
-}
-
-
-*/
 
