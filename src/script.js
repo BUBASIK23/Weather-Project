@@ -19,24 +19,40 @@ let year = currentDate.getFullYear();
 return `${day} ${hour}:${min}`;
 }
 
+function formatDay (timestamp) {
+let date = new Date (timestamp*1000);
+let day = date.getDay();
+let days= ["Sun",
+"Mon",
+"Tue",
+"Wed",
+"Thu",
+"Fri",
+"Sat"];
+return days [day];
+};
+
 //loop for forecast
 function displayForecast(response){
   console.log (response.data.daily);
+  let dailyForecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML=`<div class = "row">`;
-  let days = ["Sun", "Mon", "Tue","Wed", "Thu", "Fri", "Sat"];
-  days.forEach (function(day) {
+
+  dailyForecast.forEach (function(forecastDay, index) {
+    if (index<5) {
     forecastHTML= forecastHTML +
     ` <tr>
-    <th scope="row">${day}</th>
-    <td>+20°C</td>
-    <td>+10°C</td>
-    <td><img src="images/Sunny-Interval.png" width="30px"</td>
-    <td>4 km/h</td>
-    <td>50%</td>
-    <td>30%</td>
+    <th scope="row" style="text-align:center">${formatDay (forecastDay.dt)}</th>
+    <td >${Math.round(forecastDay.temp.day)}°C</td>
+    <td>${Math.round(forecastDay.temp.night)}°C</td>
+    <td><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" width="75px"></td>
+    <td>${Math.round(forecastDay.wind_speed)} km/h</td>
+    <td>${Math.round(forecastDay.humidity)}%</td>
       </tr>`;
+    };
   });
   forecastHTML=forecastHTML+`</div>`;
   forecastElement.innerHTML = forecastHTML;

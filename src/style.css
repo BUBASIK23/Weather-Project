@@ -114,17 +114,12 @@ img {
   text-align: center;
   width: 135px;
   height: 140px;
+  font-size: 10px;
 }
 
 .accordion-button {height: 35px;
-  font-size: 12px;}
+  font-size: 10px;}
 
-th {
-  text-align: center;
-}
-td {
-  text-align: center;
-}
 
 footer {
   font-size: 14px;
