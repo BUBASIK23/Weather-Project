@@ -20,7 +20,8 @@ return `${day} ${hour}:${min}`;
 }
 
 //loop for forecast
-function displayForecast(){
+function displayForecast(response){
+  console.log (response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML=`<div class = "row">`;
@@ -39,9 +40,16 @@ function displayForecast(){
   });
   forecastHTML=forecastHTML+`</div>`;
   forecastElement.innerHTML = forecastHTML;
-   
+   console.log(forecastHTML);
 }
 
+function getForecast (coordinates) {
+  console.log (coordinates);
+  let apiKey = "3403a0d9be1275191d4d17e1391e7b13";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log (apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 
 //function show temp in searched place
 function showTemp(response) {
@@ -59,6 +67,8 @@ document.querySelector("#description").innerHTML= response.data.weather[0].descr
 let iconElement=document.querySelector("#icon");
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
  // don't need right now: let weatherDescription = response.data.weather[0].description;
+
+getForecast (response.data.coord);
 };
 
 
@@ -146,7 +156,7 @@ defaultSearch ("Kyiv");
 
 //calling function forecast
  
-displayForecast()
+
 
 
 //changing to F
