@@ -16,13 +16,13 @@ body {
   background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);}
 
 #top-line {
-     margin-left: 12px;
-     margin-right: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
   }
 
   
 
-  #search-for-place {
+ #search-for-place {
   font-style: italic;
   font-size: 14px;
 }
@@ -54,6 +54,7 @@ color: #fdfcfb;
 
 #value {
   text-align: right;
+  padding: 0;
 
 }
 #temperature {
@@ -62,6 +63,9 @@ color: #fdfcfb;
   font-size: 38px;
 }
 
+#image {
+  padding-left: 0;
+}
 
 #perDay {
   text-align: center;
