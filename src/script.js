@@ -143,6 +143,7 @@ navigator.geolocation.getCurrentPosition(showPosition)
 
 let currentLocation = document.querySelector ("#current-location");
 currentLocation.addEventListener ("click", myCurrentLocation);
+currentLocation.addEventListener("touchstart", myCurrentLocation);
 
 
 let celsiusTemp=null;
