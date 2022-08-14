@@ -29,7 +29,7 @@ body {
 
 #submitSearch {
 font-size: 14px;
-background-color: #424649;
+background-color: #73ABB7;
 color: #fdfcfb;
 }
 
@@ -59,7 +59,7 @@ color: #fdfcfb;
 #temperature {
   text-align: right;
   color: rgb(28, 28, 46);
-  font-size: 40px;
+  font-size: 38px;
 }
 
 
