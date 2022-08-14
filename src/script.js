@@ -35,12 +35,16 @@ return days [day];
 //loop for forecast
 function displayForecast(response){
   console.log (response.data.daily);
+  document.querySelector("#Night").innerHTML= Math.round(response.data.daily[0].temp.night);
+  document.querySelector("#Morning").innerHTML= Math.round(response.data.daily[0].temp.morn);
+  document.querySelector("#Afternoon").innerHTML= Math.round(response.data.daily[0].temp.day);
+  document.querySelector("#Evening").innerHTML= Math.round(response.data.daily[0].temp.eve);
   let dailyForecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML=`<div class = "row">`;
 
   dailyForecast.forEach (function(forecastDay, index) {
-    if (index<5) {
+    if (index>0&&index<8) {
     forecastHTML= forecastHTML +
     ` <tr>
     <th scope="row" style="text-align:center">${formatDay (forecastDay.dt)}</th>

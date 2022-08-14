@@ -93,6 +93,7 @@ font-size: 14px;
 
 .extremum {
   padding-top: 10px;
+  font-size: 14px;
 }
 .features {
   font-size: 12px;
@@ -106,27 +107,30 @@ img {
 
 #description:first-letter {text-transform: uppercase;}
 
-.message {
-  text-align: right;
-}
 
 .card {
   text-align: center;
   width: 135px;
-  height: 140px;
+  height: 85px;
   font-size: 10px;
 }
 
+.dayPart {font-weight: 500;}
+
+.tempDay { font-weight: 300;}
+
+
+.accordion-button {height: 35px;
+  font-size: 8px;}
+  .message {
+    font-size: 14px;
+  font-weight: 500;
+  text-align: right;}
 
 .table {
   font-size: 14px;
 padding: 0px
-text-align: center;
 }
-
-.accordion-button {height: 35px;
-  font-size: 10px;}
-
 
 
 footer {
