@@ -49,11 +49,12 @@ font-size: 14px;
 
 #value {
   text-align: right;
+  padding-right: 0;
 }
 #temperature {
   text-align: right;
   color: rgb(28, 28, 46);
-  font-size: 50px;
+  font-size: 42px;
 }
 
 #image {
@@ -67,7 +68,7 @@ margin-left:0;
 }
 
 #metrics {
-  font-size: 40px;
+  font-size: 35px;
   color: rgb(28, 28, 46);
   
   }
@@ -99,7 +100,6 @@ margin-left:0;
 }
 
 
-
 #description:first-letter {text-transform: uppercase;}
 
 
@@ -114,7 +114,10 @@ margin-left:0;
 
 .tempDay { font-weight: 300;}
 
+.accordion-body {
+  margin-left: 0px;
 
+}
 .accordion-button {
   height: 35px;
   font-size: 8px;}
