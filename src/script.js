@@ -143,32 +143,10 @@ navigator.geolocation.getCurrentPosition(showPosition)
 let currentLocation = document.querySelector ("#current-location");
 currentLocation.addEventListener ("click", myCurrentLocation);
 
-function changeTemptoF(event) {
-  event.preventDefault ();
-  let tempElement=document.querySelector ("#temperature");
-  //remove the activ class from celsius link and add to fahren
-  metricToC.classList.remove("active");
-  metricToF.classList.add ("active");
-let fahrenheitTemp=celsiusTemp*1.8 + 32;
-tempElement.innerHTML=Math.round(fahrenheitTemp)};
-
-
-let metricToF = document.querySelector ("#F");
-metricToF.addEventListener ("click", changeTemptoF);
-
-function changeTemptoC(event) {
-  event.preventDefault ();
-  let tempElement=document.querySelector ("#temperature");
-   //add the activ class to celsius link
-   metricToC.classList.add("active");
-   metricToF.classList.remove ("active");
-  tempElement.innerHTML=Math.round(celsiusTemp);}
-
 
 let celsiusTemp=null;
 
-let metricToC = document.querySelector ("#C");
-metricToC.addEventListener ("click", changeTemptoC);
+
 
 let searchingDate = document.querySelector ("#today");
 searchingDate.innerHTML = formatDate();

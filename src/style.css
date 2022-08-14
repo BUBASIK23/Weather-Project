@@ -4,7 +4,7 @@ body {
 }
 
 .weather {
-  max-width: 700px;
+  max-width: 600px;
   border: 1px solid #61A5B5;
   border-radius: 5px;
   margin: 15px;
@@ -58,21 +58,6 @@ font-size: 14px;
   color: rgb(28, 28, 46);
   padding-left: 0px;
   }
-
-#C:link {text-decoration: none;
-  color: rgb(28, 28, 46);
-}
-
-#F:link {text-decoration: none;
-  color: rgb(28, 28, 46);
-}
-
-#C:visited {
-  color: rgb(28, 28, 46);
-}
-#F:visited {
-  color: rgb(28, 28, 46);
-}
 
 .active {
   color:  rgb(28, 28, 46);
