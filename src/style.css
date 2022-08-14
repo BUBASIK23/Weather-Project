@@ -12,13 +12,15 @@ body {
   margin-bottom: 5px;
   padding-top: 10px;
   padding-bottom: 5px;
-  text-decoration-color: #424649;
+  text-decoration-color: #424948;
   background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);}
 
 #top-line {
      margin-left: 12px;
      margin-right: 12px;
   }
+
+  
 
   #search-for-place {
   font-style: italic;
@@ -27,6 +29,8 @@ body {
 
 #submitSearch {
 font-size: 14px;
+background-color: #424649;
+color: #fdfcfb;
 }
 
 #current-location {
@@ -59,9 +63,6 @@ font-size: 14px;
 }
 
 
-
-
-
 #perDay {
   text-align: center;
 }
@@ -72,12 +73,28 @@ font-size: 14px;
   
   }
 
-.active {
+  .accordion-button:not(.collapsed) {
+    color: #FFF  ;
+    background-color: #73ABB7 ;
+  }
+
+  .accordion-button:link, .accordion-button:visited, .accordion-button:hover, .accordion-button:active, .accordion-button:focus {
+    background-color: #73ABB7 ;
+    color:#FFF ;
+    text-decoration: none ;
+    border: hidden ;
+    border-color: #FFF ;
+    box-shadow: 0px ;}
+
+      
+
+    .accordion-button:active {
   color:  rgb(28, 28, 46);
   cursor: default;
   text-decoration: none;
   font-size: 30px;
-  
+  background: #73ABB7 ;
+  border: none;
 
 }
 .active:hover {
