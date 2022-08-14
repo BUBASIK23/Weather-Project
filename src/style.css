@@ -34,11 +34,17 @@ color: #fdfcfb;
 }
 
 #current-location {
-  display: inline-block;
-  cursor:pointer;
+  
   float: right;
+  color: #56706c;
 }
 
+#current-location :hover {
+  border: transparent;
+  cursor:pointer;
+  background: #73ABB7;
+  color: #fdfcfb;
+}
 
 #today {
   font-size: 15px;
