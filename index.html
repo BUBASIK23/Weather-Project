@@ -23,22 +23,19 @@
   <body>
   <div class="weather">
       <div class="row" id="top-line">
-      <!--<div class="col Today">
-        <form id = "calendar"><input type="date" placeholder="Today" id="date"/></form>
-      </div> -->
       <div class="col-7">
-        
         <form class="otherPlace" id="searchForPlace">
           <input type="search" placeholder="Type other place"  class="form-control"  id ="search-for-place"/>
-                
       </div>
       <div class="col-2">
         <input type="submit" class="btn btn-info" value="Search" id="submitSearch"/>
       </div>
     </form>
       <div class="col-3">
-        <button id="current-location">🗺 </button>
         
+        <form>
+          <input type="image" src="images/Map_Monochromatic.svg" id="current-location" width="48px" />
+      </form>
       </div>
       </div>
     </br>
@@ -66,7 +63,6 @@
             </div>
           </div>
         </div>
-        
         <div class="col-7" >
           <div class="row align-items-center">
             <div class="col-6" id="value">
@@ -75,50 +71,30 @@
               <span class="col-3" id="metrics">°C</span>
             </div>
             <div class="col-6" id="image">
-            <img src="images/Sunny-Period.png" alt="weather" width="120px" id="icon" />
+            <img  width="120px" class="iconMain" id="icon" />
           </div>
           <div id="description"></div>
           </div>
         </div>      
       </div>
    </br>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <h6 class="card-title"><span class="dayPart">Night</br><span class="tempDay"> <span id="Night"></span>°C</span></h6>
-              
-            </div>
-          </div>
+   <hr/>
+      <div class="row" id="perDay">
+        <div class="col-sm-3" id="perDay">
+              <h6 class="card-title"><span class="dayPart">Night</br><span class="tempDay"> <span id="Night"></span>°C</span></h6>;
         </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
+        <div class="col-sm-3" id="perDay">
               <h6 class="card-title"><span class="dayPart">Morning</span> </br><span class="tempDay"> <span id="Morning"></span>°C</span></h6>
-              
-            </div>
-          </div>
         </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
+        <div class="col-sm-3" id="perDay">
               <h6 class="card-title"><span class="dayPart">Afternoon </span></br><span class="tempDay"> <span id="Afternoon"></span>°C</span></h6>
-              
-            </div>
-          </div>
         </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
+        <div class="col-sm-3" id="perDay">
               <h6 class="card-title"><span class="dayPart">Evening </span></br> <span class="tempDay"> <span id="Evening"></span>°C</span></h6>
-              
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </br>
-
   <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
@@ -141,52 +117,6 @@
         </tr>
       </thead>
       <tbody id="forecast">
-       
-        <!--<tr>
-            <th scope="row">Mon</th>
-            <td>+22°C</td>
-            <td>+13°C</td>
-            <td><img src="images/Sunny.png" width="30px"</td>
-            <td>5 km/h</div>
-            <td>50%</td>
-            <td>4%</td>
-          </tr>
-          <tr>
-              <th scope="row">Tue</th>
-              <td>+24°C</td>
-              <td>+14°C</td>
-              <td><img src="images/Sunny.png" width="30px"</td>
-              <td>4 km/h</td>
-              <td>40%</td>
-              <td>4%</td>
-            </tr>
-            <tr>
-          <th scope="row">Wedn</th>
-          <td>+25°C</td>
-          <td>+15°C</td>
-          <td><img src="images/Sunny-Period.png" width="30px"</td>
-          <td>6 km/h</td>
-          <td>50%</td>
-          <td>30%</td>
-        </tr>
-        <tr>
-            <th scope="row">Thu</th>
-            <td>+19°C</td>
-            <td>+13°C</td>
-            <td><img src="images/Showers.png" width="30px"</td>
-            <td>5 km/h</td>
-            <td>70%</td>
-            <td>75%</td>
-          </tr>
-          <tr>
-              <th scope="row">Fri</th>
-              <td>+24°C</td>
-              <td>+15°C</td>
-              <td><img src="images/Sunny-Interval.png" width="30px"</td>
-              <td>4 km/h</td>
-              <td>50%</td>
-              <td>45%</td>
-            </tr>-->
       </tbody>
     </table>
     </div>
@@ -194,7 +124,6 @@
   </div>
 </div>
 </div>
-
     <footer>
           <a href="https://github.com/BUBASIK23/Weather-Project" target="_blank" title="GitHub link" id="codeByMe">Open-source code</a> by Liubov Bieliaieva
     </footer>

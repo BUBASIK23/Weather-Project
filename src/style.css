@@ -31,6 +31,7 @@ font-size: 14px;
 
 #current-location {
   display: inline-block;
+
   float: right;
 }
 
@@ -64,7 +65,11 @@ font-size: 14px;
 
 img {
 display: block;
-margin-left:0; 
+margin:0; 
+}
+
+#perDay {
+  text-align: center;
 }
 
 #metrics {
@@ -130,6 +135,7 @@ margin-left:0;
   font-size: 14px;
 padding: 0px
 }
+
 
 
 footer {
