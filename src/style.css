@@ -1,6 +1,7 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   opacity: 85%;
+  
 }
 
 .weather {
@@ -12,8 +13,7 @@ body {
   padding-top: 10px;
   padding-bottom: 5px;
   text-decoration-color: #424649;
-
-}
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);}
 
 #top-line {
      margin-left: 12px;
@@ -31,7 +31,7 @@ font-size: 14px;
 
 #current-location {
   display: inline-block;
-
+  cursor:pointer;
   float: right;
 }
 
@@ -58,15 +58,9 @@ font-size: 14px;
   font-size: 42px;
 }
 
-#image {
-  text-align: left;
-  padding-left: 0px;
-}
 
-img {
-display: block;
-margin:0; 
-}
+
+
 
 #perDay {
   text-align: center;
@@ -83,6 +77,8 @@ margin:0;
   cursor: default;
   text-decoration: none;
   font-size: 30px;
+  
+
 }
 .active:hover {
   text-decoration: none;
@@ -108,20 +104,13 @@ margin:0;
 #description:first-letter {text-transform: uppercase;}
 
 
-.card {
-  text-align: center;
-  width: 135px;
-  height: 85px;
-  font-size: 10px;
-}
-
 .dayPart {font-weight: 500;}
 
 .tempDay { font-weight: 300;}
 
 .accordion-body {
   margin-left: 0px;
-
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 .accordion-button {
   height: 35px;

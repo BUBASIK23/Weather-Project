@@ -140,6 +140,7 @@ event.preventDefault ();
 navigator.geolocation.getCurrentPosition(showPosition)
 };
 
+
 let currentLocation = document.querySelector ("#current-location");
 currentLocation.addEventListener ("click", myCurrentLocation);
 
