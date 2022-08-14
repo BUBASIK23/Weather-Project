@@ -45,15 +45,13 @@
     </br>
     <div class="container">
       <div class="row">
-        <div class="col-8">
+        <div class="col-5">
           <div class="place">
             <div class="row">
               <div class="col-6" id="searchedPlace"></div>
-              <div class="col-3" id="temperature"></div>
-              <span class="col-3" id="metrics">°C</span>
+              <!--<div class="col-3" id="temperature"></div>
+              <span class="col-3" id="metrics">°C</span>-->
               <span id="today"></span>
-              
-              
             </div>
           </div>
           <div class="extremum">
@@ -69,12 +67,20 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
-          
+        
+        <div class="col-7" >
+          <div class="row align-items-center">
+            <div class="col-6" id="value">
           <!--<em>Don't forget your jacket ;)</em>-->
-          <img src="images/Sunny-Period.png" alt="weather" width="120px" id="icon" />
+          <span  id="temperature" style="text-align:center"></span>
+              <span class="col-3" id="metrics">°C</span>
+            </div>
+            <div class="col-6" id="image">
+            <img src="images/Sunny-Period.png" alt="weather" width="150px" id="icon" />
+          </div>
           <div id="description"></div>
-        </div>
+          </div>
+        </div>      
       </div>
    </br>
       <div class="row">

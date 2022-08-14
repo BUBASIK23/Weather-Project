@@ -47,16 +47,29 @@ font-size: 14px;
   font-size: 32px;
 }
 
+#value {
+  text-align: right;
+}
 #temperature {
   text-align: right;
   color: rgb(28, 28, 46);
-  padding-right: 3px;
+  font-size: 50px;
+}
+
+#image {
+  text-align: left;
+  padding-left: 0px;
+}
+
+img {
+display: block;
+margin-left:0; 
 }
 
 #metrics {
-  font-size: 23px;
+  font-size: 40px;
   color: rgb(28, 28, 46);
-  padding-left: 0px;
+  
   }
 
 .active {
@@ -85,10 +98,7 @@ font-size: 14px;
   padding-top: 10px;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
-}
+
 
 #description:first-letter {text-transform: uppercase;}
 
@@ -105,7 +115,8 @@ img {
 .tempDay { font-weight: 300;}
 
 
-.accordion-button {height: 35px;
+.accordion-button {
+  height: 35px;
   font-size: 8px;}
   .message {
     font-size: 14px;
