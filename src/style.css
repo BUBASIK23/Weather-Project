@@ -1,19 +1,19 @@
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   opacity: 85%;
   
 }
 
 .weather {
   max-width: 650px;
-  border: 1px solid #61A5B5;
-  border-radius: 5px;
+  
+  border-radius: 2px;
   margin: 15px;
   margin-bottom: 5px;
   padding-top: 10px;
   padding-bottom: 5px;
-  text-decoration-color: #424948;
-  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);}
+  
+   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);}
 
 #top-line {
     margin-left: 12px;
